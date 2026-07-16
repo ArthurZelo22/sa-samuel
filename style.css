@@ -2,12 +2,16 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Geomini:wght@200..800&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
+
+body {
+    background-color: #f4f6f9;
+}
 
 img {
     width: 300px;
 }
 
-p,
 li {
     font-family: "Geomini", sans-serif;
     font-optical-sizing: auto;
@@ -15,13 +19,47 @@ li {
     font-style: normal;
 }
 
-.nome-empresa {
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    letter-spacing: 1px;
+#desc-empresa {
+    background-color: rgb(55, 54, 56);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    padding: 60px 20px;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#desc-titulo {
+    display: flex;
+}
+
+#desc-titulo h1 {
+    font-size: 90px;
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#desc-empresa h2 {
+    color: rgb(255, 255, 255);
+    font-family: "Geomini", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 13px;
+}
+
+#desc-empresa img {
+    width: 400px;
+    height: auto;
+}
 
 #cabecalho {
     background-color: rgb(55, 54, 56);
@@ -38,14 +76,25 @@ li {
 
 #empresa {
     display: flex;
-
+    align-items: center;
 }
 
-#empresa #branco {
+#empresa p {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.branco {
     color: rgb(255, 255, 255);
 }
 
-#empresa #azul {
+.azul {
     color: #10b981;
 }
 
@@ -56,13 +105,43 @@ li {
 
 #cabecalho ul {
     display: flex;
-    gap: 30px;
+    gap: 50px;
 
-    list-style: "| ";
+    list-style: "|    ";
     color: aliceblue;
 
-    margin-right: 20px;
+    margin-right: 60px;
 }
+
+h3 {
+    font-size: 50px;
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#card_01,
+#card_02,
+#card_03 {
+    width: 300px;
+    background-color: white;
+    border: solid 2px rgba(55, 54, 56, 0.589);
+    border-radius: 10px;
+}
+
+.desc-produto {
+    background-color: rgba(55, 54, 56, 0.305);
+}
+
+.nome-produto {
+    font-family: "Geomini", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.preco {}
+
 
 
 

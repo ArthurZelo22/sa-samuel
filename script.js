@@ -1,10 +1,11 @@
-function botaoCaixa(){
-    
+function botaoCaixa() {
+
     let containerCarrinho = document.getElementById('carrinho')
     let pCarrinho = document.getElementById('carrinho-vazio')
 
-    if (pCarrinho && pCarrinho.innerText === 'Seu carrinho está vazio'){
-        pCarrinho.remove()}
+    if (pCarrinho && pCarrinho.innerText === 'Seu carrinho está vazio') {
+        pCarrinho.remove()
+    }
 
 
     let listaItens = document.createElement('div')
@@ -17,17 +18,18 @@ function botaoCaixa(){
     novoItem.innerHTML = ('Caixa de som Bluetooth   R$ 750,00   <button onclick="this.parentElement.remove()">Remover</button>')
 
     listaItens.appendChild(novoItem)
-    }
+}
 
 
 
-function botaoFone(){
-    
+function botaoFone() {
+
     let containerCarrinho = document.getElementById('carrinho')
     let pCarrinho = document.getElementById('carrinho-vazio')
 
-    if (pCarrinho && pCarrinho.innerText === 'Seu carrinho está vazio'){
-        pCarrinho.remove()}
+    if (pCarrinho && pCarrinho.innerText === 'Seu carrinho está vazio') {
+        pCarrinho.remove()
+    }
 
 
     let listaItens = document.createElement('div')
@@ -40,17 +42,18 @@ function botaoFone(){
     novoItem.innerHTML = ('Fone de ouvido Bluetooth   R$ 250,00   <button onclick="this.parentElement.remove()">Remover</button>')
 
     listaItens.appendChild(novoItem)
-    }
+}
 
 
 
-function botaoRelogio(){
-    
+function botaoRelogio() {
+
     let containerCarrinho = document.getElementById('carrinho')
     let pCarrinho = document.getElementById('carrinho-vazio')
 
-    if (pCarrinho && pCarrinho.innerText === 'Seu carrinho está vazio'){
-        pCarrinho.remove()}
+    if (pCarrinho && pCarrinho.innerText === 'Seu carrinho está vazio') {
+        pCarrinho.remove()
+    }
 
 
     let listaItens = document.createElement('div')
@@ -63,4 +66,4 @@ function botaoRelogio(){
     novoItem.innerHTML = ('Relógio   R$ 550,00   <button onclick="this.parentElement.remove()">Remover</button>')
 
     listaItens.appendChild(novoItem)
-    }
+}

@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TekkoKoala</title>
     <link rel="stylesheet" href="style.css">
-    
+
 </head>
 
 <body>
-<script src="script.js"></script>
+    <script src="script.js"></script>
     <header>
 
         <div id="cabecalho">
             <div id="empresa">
-                <p class="nome-empresa" id="branco">Tekko</p>
-                <p class="nome-empresa" id="azul">Koala</p>
+                <img src="imagens/foto_logo.png" alt="Logo da TekkoKoala">
+                <p class="branco">Tekko</p>
+                <p class="azul">Koala</p>
             </div>
 
             <nav>
@@ -29,11 +30,15 @@
 
         </div>
 
-        <div id="cor-cabecalho"></div>
+        <div id="desc-empresa">
 
-        <div>
+            <img src="imagens/foto_logo.png" alt="">
 
-            <h1>TekkoKoala</h1>
+            <div id="desc-titulo">
+                <h1 class="branco">Tekko</h1>
+                <h1 class="azul">Koala</h1>
+            </div>
+
             <h2>A TekkoKoala é uma loja virtual de gadgets modernos que nasceu para descomplicar a tecnologia com leveza
                 e carisma. Inspirados na tranquilidade do coala, oferecemos eletrônicos de ponta através de uma
                 experiência de compra simples, rápida e totalmente sem estresse.</h2>
@@ -52,24 +57,29 @@
 
                 <div id="card_01">
                     <img src="imagens/headphone.png" alt="Foto de um fone de ouvido">
-                    <p class="nome.produto">Fone de ouvido Bluetooth</p>
-                    <p class="preco">R$ 250,00</p>
-                    <button class="botao-carrinho" onclick="botaoFone()">adicionar ao carrinho</button>
+                    <div class="desc-produto">
+                        <p class="nome-produto">Fone de ouvido Bluetooth</p>
+                        <p class="preco">R$ 250,00</p>
+                        <button class="botao-carrinho" onclick="botaoFone()">adicionar ao carrinho</button>
+                    </div>
                 </div>
 
                 <div id="card_02">
                     <img src="imagens/smartwatch.png" alt="Foto de um relógio de pulso.">
-                    <p class="nome.produto">Relógio</p>
-                    <p class="preco">R$ 550,00</p>
-                    <button class="botao-carrinho" onclick="botaoRelogio()">adicionar ao carrinho</button>
+                    <div class="desc-produto">
+                        <p class="nome-produto">Relógio</p>
+                        <p class="preco">R$ 550,00</p>
+                        <button class="botao-carrinho" onclick="botaoRelogio()">adicionar ao carrinho</button>
+                    </div>
                 </div>
-
 
                 <div id="card_03">
                     <img src="imagens/caixa.de.som.png" alt="Foto de uma caixa de som.">
-                    <p class="nome.produto">Caixa de som Bluetooth</p>
-                    <p class="preco">R$ 750,00</p>
-                    <button class="botao-carrinho" onclick="botaoCaixa()">adicionar ao carrinho</button>
+                    <div class="desc-produto">
+                        <p class="nome-produto">Caixa de som Bluetooth</p>
+                        <p class="preco">R$ 750,00</p>
+                        <button class="botao-carrinho" onclick="botaoCaixa()">adicionar ao carrinho</button>
+                    </div>
                 </div>
 
             </div>
