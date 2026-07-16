@@ -1,23 +1,71 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Geomini:wght@200..800&display=swap');
+
+
+img {
+    width: 300px;
+}
+
+p,
+li {
+    font-family: "Geomini", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.nome-empresa {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+
 #cabecalho {
-    background-color: rgb(56, 54, 54);
+    background-color: rgb(55, 54, 56);
     display: flex;
-    flex-direction: row;
+
+    justify-content: space-between;
+    padding: 10px 10px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 #empresa {
     display: flex;
+
+}
+
+#empresa #branco {
+    color: rgb(255, 255, 255);
+}
+
+#empresa #azul {
+    color: #10b981;
 }
 
 #cabecalho img {
     width: 60px;
-    height: 40px;
+    height: auto;
 }
 
 #cabecalho ul {
     display: flex;
-    gap: 10px;
+    gap: 30px;
 
-    list-style: "|";
+    list-style: "| ";
+    color: aliceblue;
+
+    margin-right: 20px;
+}
+
+
+
+#merda {
+    background-color: yellowgreen;
 }
