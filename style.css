@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+#cabecalho {
+    background-color: rgb(56, 54, 54);
+    display: flex;
+    flex-direction: row;
+}
+
+#empresa {
+    display: flex;
+}
+
+#cabecalho img {
+    width: 60px;
+    height: 40px;
+}
+
+#cabecalho ul {
+    display: flex;
+    gap: 10px;
+
+    list-style: "|";
+}
