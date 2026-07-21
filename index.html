@@ -11,6 +11,7 @@
 
 <body>
     <script src="script.js"></script>
+
     <header>
 
         <div id="cabecalho">
@@ -22,9 +23,9 @@
 
             <nav>
                 <ul>
-                    <li>início</li>
-                    <li>história</li>
-                    <li>contatos</li>
+                    <li><a href="index.html">início</a></li>
+                    <li><a href="historia.html">história</a></li>
+                    <li><a href="contatos.html">contatos</a></li>
                 </ul>
             </nav>
 
@@ -50,35 +51,40 @@
     <main>
 
         <section id="produtos-section">
-            <div class="cor-texto"></div>
             <h3>Produtos</h3>
 
             <div class="cards">
 
-                <div id="card_01">
-                    <img src="imagens/headphone.png" alt="Foto de um fone de ouvido">
-                    <div class="desc-produto">
-                        <p class="nome-produto">Fone de ouvido Bluetooth</p>
-                        <p class="preco">R$ 250,00</p>
-                        <button class="botao-carrinho" onclick="botaoFone()">adicionar ao carrinho</button>
+                <div class="efeito-card">
+                    <div id="card_01">
+                        <img src="imagens/headphone.png" alt="Foto de um fone de ouvido">
+                        <div class="desc-produto">
+                            <p class="nome-produto">Fone de ouvido Bluetooth</p>
+                            <p class="preco">R$ 250,00</p>
+                            <button class="botao-carrinho" onclick="botaoFone()">adicionar ao carrinho</button>
+                        </div>
                     </div>
                 </div>
 
-                <div id="card_02">
-                    <img src="imagens/smartwatch.png" alt="Foto de um relógio de pulso.">
-                    <div class="desc-produto">
-                        <p class="nome-produto">Relógio</p>
-                        <p class="preco">R$ 550,00</p>
-                        <button class="botao-carrinho" onclick="botaoRelogio()">adicionar ao carrinho</button>
+                <div class="efeito-card">
+                    <div id="card_02">
+                        <img src="imagens/smartwatch.png" alt="Foto de um relógio de pulso.">
+                        <div class="desc-produto">
+                            <p class="nome-produto">Relógio</p>
+                            <p class="preco">R$ 550,00</p>
+                            <button class="botao-carrinho" onclick="botaoRelogio()">adicionar ao carrinho</button>
+                        </div>
                     </div>
                 </div>
 
-                <div id="card_03">
-                    <img src="imagens/caixa.de.som.png" alt="Foto de uma caixa de som.">
-                    <div class="desc-produto">
-                        <p class="nome-produto">Caixa de som Bluetooth</p>
-                        <p class="preco">R$ 750,00</p>
-                        <button class="botao-carrinho" onclick="botaoCaixa()">adicionar ao carrinho</button>
+                <div class="efeito-card">
+                    <div id="card_03">
+                        <img src="imagens/caixa.de.som.png" alt="Foto de uma caixa de som.">
+                        <div class="desc-produto">
+                            <p class="nome-produto">Caixa de som Bluetooth</p>
+                            <p class="preco">R$ 750,00</p>
+                            <button class="botao-carrinho" onclick="botaoCaixa()">adicionar ao carrinho</button>
+                        </div>
                     </div>
                 </div>
 
@@ -87,7 +93,6 @@
         </section>
 
         <section id="carrinho-section">
-            <div class="cor-texto"></div>
 
             <div id="espaco-calculo">
                 <div id="carrinho">
@@ -100,10 +105,9 @@
                     <div id="subtotal">
                         <p>Subtotal :</p>
                         <p>R$ 0,00</p>
-
-                        <span>Ganhe 10% de desconto em compras acima de R$ 1.000,00!</span>
-
                     </div>
+
+                    <p id="desconto">Ganhe 10% de desconto em compras acima de R$ 1.000,00!</p>
 
                     <div id="total">
                         <p>Total :</p>
@@ -114,12 +118,14 @@
 
             <div id="espaco-dados">
                 <form>
-                    <span>Dados para Entrega</span>
+                    <h4>Dados para Entrega</h4>
                     <label>Nome completo:</label>
                     <input type="text" placeholder="Digite seu nome aqui">
 
                     <label>E-mail:</label>
-                    <input type="text" placeholder="nome@email.com">
+                    <input type="email" placeholder="nome@email.com">
+
+                    <button>Enviar</button>
 
                 </form>
             </div>

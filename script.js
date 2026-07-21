@@ -1,3 +1,5 @@
+let contador = 0
+
 function botaoCaixa() {
 
     let containerCarrinho = document.getElementById('carrinho')
@@ -11,13 +13,15 @@ function botaoCaixa() {
     let listaItens = document.createElement('div')
     containerCarrinho.appendChild(listaItens)
 
-
+    listaItens.id = 'lista-itens'
     let novoItem = document.createElement('div')
-    novoItem.id = 'item-no-carrinho'
+    novoItem.className = 'item-no-carrinho'
 
-    novoItem.innerHTML = ('Caixa de som Bluetooth   R$ 750,00   <button onclick="this.parentElement.remove()">Remover</button>')
+    novoItem.innerHTML = ('Caixa de som Bluetooth |  R$ 750,00   <button onclick="removerItem(this)">Remover</button>')
 
     listaItens.appendChild(novoItem)
+
+    contador++
 }
 
 
@@ -37,11 +41,13 @@ function botaoFone() {
 
 
     let novoItem = document.createElement('div')
-    novoItem.id = 'item-no-carrinho'
+    novoItem.className = 'item-no-carrinho'
 
-    novoItem.innerHTML = ('Fone de ouvido Bluetooth   R$ 250,00   <button onclick="this.parentElement.remove()">Remover</button>')
+    novoItem.innerHTML = ('Fone de ouvido Bluetooth  | R$ 250,00   <button onclick="removerItem(this)">Remover</button>')
 
     listaItens.appendChild(novoItem)
+
+    contador++
 }
 
 
@@ -61,9 +67,27 @@ function botaoRelogio() {
 
 
     let novoItem = document.createElement('div')
-    novoItem.id = 'item-no-carrinho'
+    novoItem.className = 'item-no-carrinho'
 
-    novoItem.innerHTML = ('Relógio   R$ 550,00   <button onclick="this.parentElement.remove()">Remover</button>')
+    novoItem.innerHTML = ('Relógio |  R$ 550,00   <button onclick="removerItem(this)">Remover</button>')
 
     listaItens.appendChild(novoItem)
+
+    contador++
+}
+
+
+
+function removerItem(botao) {
+    let containerCarrinho = document.getElementById('carrinho')
+    
+    botao.parentElement.remove()
+    contador--
+
+    if (contador === 0) {
+        let pCarrinho = document.createElement('p')
+        pCarrinho.id = 'carrinho-vazio'
+        pCarrinho.innerText = 'Seu carrinho está vazio'
+        containerCarrinho.appendChild(pCarrinho)
+    }   
 }

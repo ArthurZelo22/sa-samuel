@@ -4,12 +4,29 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+
+    transition: 0.3s ease-out;
+}
+
+a:hover {
+    color: #10b981;
+}
+
 body {
     background-color: #f4f6f9;
 }
 
-img {
-    width: 300px;
+section {
+    margin-top: 20px;
 }
 
 li {
@@ -30,12 +47,6 @@ li {
     padding: 60px 20px;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 #desc-titulo {
     display: flex;
 }
@@ -54,6 +65,7 @@ li {
     font-weight: weight;
     font-style: normal;
     font-size: 13px;
+    width: 50%;
 }
 
 #desc-empresa img {
@@ -72,6 +84,9 @@ li {
     top: 0;
     left: 0;
     width: 100%;
+
+    border: solid 2px rgba(55, 54, 56, 0.589);
+    flex-wrap: wrap;
 }
 
 #empresa {
@@ -114,37 +129,286 @@ li {
 }
 
 h3 {
-    font-size: 50px;
+    font-size: 40px;
     font-family: "Anton SC", sans-serif;
     font-weight: 400;
     font-style: normal;
+
+    border-left: #10b981 10px solid;
+    padding-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#produtos-section {
+    width: 70%;
 }
 
 #card_01,
 #card_02,
 #card_03 {
-    width: 300px;
+    width: 250px;
+    height: 500px;
     background-color: white;
-    border: solid 2px rgba(55, 54, 56, 0.589);
     border-radius: 10px;
+
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.053);
 }
 
-.desc-produto {
-    background-color: rgba(55, 54, 56, 0.305);
+.efeito-card {
+    transition: 0.3s ease-out;
+}
+
+.efeito-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.053);
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.cards img {
+    width: 300px;
+    height: 300px;
 }
 
 .nome-produto {
+    font-size: 25px;
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.desc-produto {
+    padding: 15px;
+}
+
+.preco {
+    font-size: 22px;
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    color: #10b981;
+}
+
+.botao-carrinho {
+    width: 100%;
+    color: white;
+    background-color: #10b981;
+    border: none;
+    border-radius: 7px;
+
+    padding: 10px;
+    margin-top: 10px;
+
+    font-size: 15px;
+    font-family: "Geomini", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+
+    transition: 0.3s ease-out;
+}
+
+.botao-carrinho:hover {
+    background-color: #0e9e6e;
+}
+
+#carrinho-section {
+    background-color: white;
+    width: 30%;
+    height: 100%;
+    padding: 20px;
+
+    border-radius: 10px;
+
     font-family: "Geomini", sans-serif;
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
 }
 
-.preco {}
+#calculo-valor {
+    background-color: #f4f6f9;
+    border: 2px dotted #c4c6c8c2;
+    border-radius: 10px;
+    width: 100%;
+
+    margin-bottom: 20px;
+}
+
+#carrinho-vazio {
+    color: #bcbdbe;
+    text-align: center;
+    margin: 20px;
+}
+
+#subtotal {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+    font-size: 14px;
+}
+
+#total {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#desconto {
+    color: #10b981;
+    text-align: center;
+    margin: 15px;
+
+    font-size: 12px;
+}
+
+#espaco-dados h4 {
+    font-family: "Geomini", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 20px;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#espaco-dados {
+    border-top: #c4c6c8c2 2px solid;
+}
+
+#espaco-dados form {
+    display: flex;
+    flex-direction: column;
+}
+
+#espaco-dados label {
+    margin-bottom: 5px;
+}
+
+#espaco-dados button {
+    font-family: "Geomini", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+
+    height: 40px;
+    border-radius: 5px;
+
+    border: 1px solid #0d8c62;
+    background-color: #10b9819f;
+}
+
+input {
+    border: 1px solid #c4c6c8c2;
+    background-color: #f4f6f9;
+    border-radius: 5px;
+
+    width: 100%;
+    height: 38px;
+
+    margin-bottom: 15px;
+}
+
+input::placeholder {
+    font-family: "Geomini", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+footer {
+    background-color: rgb(55, 54, 56);
+    color: rgb(255, 255, 255);
+
+    margin-top: 50px;
+
+    height: 65px;
+
+    font-family: "Geomini", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
+main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    padding: 25px;
+}
+
+@media (max-width: 1000px) {
+
+    #produtos-section {
+        width: 100%;
+    }
+
+    #carrinho-section {
+        width: 100%;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.item-no-carrinho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    border: 1px solid #eef2f3;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+    font-family: sans-serif;
+    color: #333;
+}
+
+.item-no-carrinho button {
+    background-color: #fff1f0;
+    color: #f5222d;
+    border: 1px solid #ffa39e;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.item-no-carrinho button:hover {
+    background-color: #f5222d;
+    color: #ffffff;
+    border-color: #f5222d;
+}
 
 
-#merda {
-    background-color: yellowgreen;
+#carrinho {
+    max-height: 400px;
+
+    overflow-y: auto;
+
+    overflow-x: hidden;
 }
