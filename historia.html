@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TekkoKoala - História</title>
-   <link rel="stylesheet" href="style.css">
+
+    <link rel="shortcut icon" href="imagens/foto_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <header>
         <div id="cabecalho">
             <div id="empresa">
                 <img src="imagens/foto_logo.png" alt="Logo da TekkoKoala">
                 <p class="branco">Tekko</p>
                 <p class="azul">Koala</p>
             </div>
-
             <nav>
                 <ul>
                     <li><a href="index.html">início</a></li>
@@ -21,7 +25,97 @@
                     <li><a href="contatos.html">contatos</a></li>
                 </ul>
             </nav>
-
         </div>
+    </header>
+
+    <main id="main-historia">
+        <section id="historia-section">
+            <div id="botao-tamanho">
+
+                <h1 class="titulo-historia">Nossa história</h1>
+                <p class="texto-historia">A TekkoKoala nasceu da união, da visão e da paixão pela inovação dos seus três
+                    fundadores: Arthur
+                    Tavares,
+                    Bruno e Eduardo Vieira. <br>
+                    Como entusiastas do universo tech, nós sempre acompanhamos de perto a evolução dos gadgets e
+                    eletrônicos
+                    de
+                    ponta. <br> <br>
+                    No entanto, percebemos que a jornada para adquirir esses produtos na internet muitas vezes se
+                    tornava
+                    um processo confuso, poluído visualmente e cheio de etapas desnecessárias que geravam estresse no
+                    consumidor. <br>
+                    Incomodados com essa realidade, decidimos criar a solução que nós mesmos gostaríamos de encontrar no
+                    mercado. Foi assim que idealizamos e projetamos a TekkoKoala: uma e-commerce desenvolvida com foco
+                    total
+                    na
+                    experiência do usuário, priorizando uma organização incrível, navegação fluida e absoluta
+                    transparência.
+                    <br> <br>
+                    Do catálogo intuitivo de produtos até a clareza nas etapas do carrinho e fechamento de pedido, cada
+                    detalhe
+                    do nosso site foi desenhado para eliminar a complexidade. <br>
+                    Acreditamos que a tecnologia existe para
+                    facilitar
+                    a vida das pessoas — e a experiência de comprá-la deve seguir exatamente o mesmo princípio.
+                </p>
+
+                <button onclick="aparecerHistoria()">RESUMO</button>
+                <div id="historia-escondida">
+
+                    <div class="div-escondida">
+                        <p>Fundada por Arthur Tavares, Bruno e Eduardo Vieira, a TekkoKoala é uma e-commerce de
+                            tecnologia
+                            criada com organização incrível para garantir uma compra simples, rápida e transparente.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="coala-section">
+
+            <div id="botao-tamanho">
+                <h1 class="titulo-historia">Por que um Coala?</h1>
+                <p class="texto-historia">Quando pensamos na identidade da marca, queríamos fugir da frieza que o setor
+                    de
+                    tecnologia costuma ter.
+                    A escolha do coala como nosso mascote sintetiza a nossa essência: </p>
+                <div class="desc-coala">
+                    <p class="texto-historia">
+                        <mark>Calma e Tranquilidade:</mark> O coala é um animal calmo e acolhedor. Ele representa o
+                        nosso
+                        compromisso em
+                        descomplicar a tecnologia para você comprar sem estresse.
+                    </p>
+                </div>
+                <div class="desc-coala">
+                    <p class="texto-historia">
+                        <mark>Equilíbrio com o "Tekko":</mark> Enquanto a palavra Tekko remete à inovação e modernidade
+                        dos
+                        nossos
+                        eletrônicos, o Koala traz a leveza, o carisma e a simplicidade humana no atendimento.
+                    </p>
+                </div>
+                <p class="texto-historia">
+                    Na TekkoKoala, unimos tecnologia de ponta com a calma de um coala para que a sua única preocupação
+                    seja
+                    aproveitar seu produto novo!
+                </p>
+                <button onclick="aparecerCoala()">RESUMO</button>
+                <div id="coala-escondido">
+
+                    <div class="div-escondida">
+                        <p>O coala simboliza nossa proposta de tecnologia sem estresse: sua calma e carisma equilibram o
+                            termo
+                            Tekko (inovação), unindo produtos modernos a uma experiência leve e acolhedora.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <script src="script.js"></script>
 </body>
+
 </html>

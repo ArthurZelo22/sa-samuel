@@ -80,7 +80,7 @@ function botaoRelogio() {
 
 function removerItem(botao) {
     let containerCarrinho = document.getElementById('carrinho')
-    
+
     botao.parentElement.remove()
     contador--
 
@@ -89,5 +89,31 @@ function removerItem(botao) {
         pCarrinho.id = 'carrinho-vazio'
         pCarrinho.innerText = 'Seu carrinho está vazio'
         containerCarrinho.appendChild(pCarrinho)
-    }   
+    }
+}
+
+function aparecerHistoria() {
+    let his = document.getElementById('historia-escondida')
+
+    if (his.style.display === 'none') {
+        his.style.display = 'block'
+    } else {
+        his.style.display = 'none'
+    }
+}
+
+function aparecerCoala() {
+    let coa = document.getElementById('coala-escondido')
+
+    if (coa.style.display === 'none') {
+        coa.style.display = 'block'
+    } else {
+        coa.style.display = 'none'
+    }
+}
+
+function corFundo(){
+    let body = document.getElementById('body')
+
+    body.classList.toggle('modo-escuro');
 }

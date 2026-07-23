@@ -22,7 +22,38 @@ a:hover {
 }
 
 body {
-    background-color: #f4f6f9;
+    background-color: rgb(244, 246, 249);
+}
+
+body.modo-escuro {
+    background-color: rgb(55, 54, 56);
+}
+
+body.modo-escuro #cabecalho,
+body.modo-escuro #desc-empresa,
+body.modo-escuro footer {
+    background-color: rgb(32, 32, 32);
+}
+
+body.modo-escuro #card_01,
+body.modo-escuro #card_02,
+body.modo-escuro #card_03,
+body.modo-escuro #carrinho-section {
+    background-color: #2b2b2b;
+    color: white;
+}
+
+body.modo-escuro #calculo-valor {
+    background-color: rgb(55, 54, 56);
+}
+
+body.modo-escuro .item-no-carrinho {
+    background-color: rgb(55, 54, 56);
+    color: white;
+}
+
+body.modo-escuro #produtos-section h3 {
+    color: white;
 }
 
 section {
@@ -35,6 +66,8 @@ li {
     font-weight: weight;
     font-style: normal;
 }
+
+
 
 #desc-empresa {
     background-color: rgb(55, 54, 56);
@@ -87,6 +120,40 @@ li {
 
     border: solid 2px rgba(55, 54, 56, 0.589);
     flex-wrap: wrap;
+}
+
+#cabecalho button {
+    font-family: "Geomini", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+
+    border-radius: 3px;
+    border: none;
+
+    padding: 7px;
+
+    transition: 0.3s ease-out;
+}
+
+#cabecalho button:hover{
+    background-color: rgb(208, 204, 204);
+}
+
+#lista-fundo {
+    list-style: none;
+}
+
+@media (max-width: 685px) {
+    #cabecalho {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #desc-empresa {
+        margin-top: 80px;
+    }
 }
 
 #empresa {
@@ -289,6 +356,7 @@ h3 {
     border-top: #c4c6c8c2 2px solid;
 }
 
+
 #espaco-dados form {
     display: flex;
     flex-direction: column;
@@ -309,6 +377,14 @@ h3 {
 
     border: 1px solid #0d8c62;
     background-color: #10b9819f;
+
+    transition: 0.3s ease-out;
+}
+
+#espaco-dados button:hover {
+    background-color: #0d8c62;
+    color: white;
+    transform: translateY(-3.5px);
 }
 
 input {
@@ -347,12 +423,110 @@ footer {
     justify-content: center;
 }
 
+#main-historia {
+    margin-top: 100px;
+    display: flex;
+    gap: 20px;
+}
+
+#main-historia section {
+    background-color: white;
+    border: 2px dotted #c4c6c8c2;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#historia-section {
+    width: 50%;
+}
+
+#coala-section {
+    width: 50%;
+}
+
+.texto-historia {
+    font-family: "Geomini", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+
+    text-align: justify;
+    padding: 20px;
+}
+
+.titulo-historia {
+    text-transform: uppercase;
+    display: inline-block;
+    border: #10b981 5px solid;
+    margin-top: 20px;
+    padding: 10px 20px;
+
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.desc-coala {
+    background-color: #f4f6f9;
+    border: 1px dotted #c4c6c8c2;
+
+    margin: 8px 13px;
+}
+
+.desc-coala mark {
+    background-color: #0d8c6274;
+}
+
+.div-escondida p {
+    font-family: "Geomini", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+
+    border: #0b996a solid 2px;
+
+    margin: 10px 20px;
+    padding: 15px 50px;
+}
+
+#historia-escondida {
+    display: none;
+}
+
+#coala-escondido {
+    display: none;
+}
+
+#botao-tamanho button {
+    width: fit-content;
+    height: auto;
+    padding: 15px 100px;
+
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+    background-color: #10b981;
+    border: #0b996a solid 1.5px;
+    border-radius: 5px;
+
+    font-family: "Geomini", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+
+    transition: 0.3s ease-out;
+}
+
+#botao-tamanho button:hover {
+    background-color: #0e9e6e;
+
+    transform: translateY(-3px);
+}
 
 main {
     display: flex;
     flex-direction: row;
     width: 100%;
-
     padding: 25px;
 }
 
@@ -370,7 +544,22 @@ main {
         display: flex;
         flex-direction: column;
     }
+
+    #historia-section {
+        width: 100%;
+    }
+
+    #coala-section {
+        width: 100%;
+    }
 }
+
+@media (min-width: 540px) {
+    #botao-tamanho button {
+        padding: 10px 200px;
+    }
+}
+
 
 .item-no-carrinho {
     display: flex;
