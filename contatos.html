@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="body">
     <header>
         <div id="cabecalho">
             <div id="empresa">
@@ -18,21 +18,60 @@
                 <p class="branco">Tekko</p>
                 <p class="azul">Koala</p>
             </div>
+
             <nav>
                 <ul>
+                    <li id="lista-fundo"><button onclick="corFundo()">Cor de fundo</button></li>
                     <li><a href="index.html">início</a></li>
                     <li><a href="historia.html">história</a></li>
                     <li><a href="contatos.html">contatos</a></li>
                 </ul>
             </nav>
+
         </div>
     </header>
 
     <main id="main-contatos">
-        
+
+        <section id="Arthur">
+            <div class="insta-nome">
+                <img id="foto-insta" src="imagens/foto-insta-arthur.jpeg" alt="">
+                <h1>Arthur</h1>
+            </div>
+            <p><a class="insta" target="_blank"
+                    href="https://www.instagram.com/arthurzelo_?igsh=aXpnZTE0YnoyYzI4">@arthurzelo_</a></p>
+
+        </section>
+
+        <section id="Bruno">
+            <div class="insta-nome">
+                <img id="foto-insta" src="imagens/foto-insta-bruno.jpeg" alt="">
+                <h1>Bruno</h1>
+            </div>
+            <p><a class="insta" target="_blank"
+                    href="https://www.instagram.com/brunowinck._/?utm_source=ig_web_button_share_sheet">@brunowinck._</a>
+            </p>
+
+        </section>
+
+        <section id="Eduardo">
+            <div class="insta-nome">
+                <img id="foto-insta" src="imagens/foto-insta-arthur.jpeg" alt="">
+                <h1>Eduardo</h1>
+            </div>
+            <p><a class="insta" target="_blank"
+                    href="https://www.instagram.com/_eduu_vieira_/?utm_source=ig_web_button_share_sheet">@_eduu_vieira_</a>
+            </p>
+
+        </section>
 
     </main>
 
+    <footer>
+        <p>&copy; 2026 TekkoKoala. Projeto Acadêmico de Loja Virtual.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

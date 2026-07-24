@@ -1,8 +1,11 @@
 @charset "UTF-8";
 
 @import url('https://fonts.googleapis.com/css2?family=Geomini:wght@200..800&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
+
+/* ==========================================
+   ESTILOS GLOBAIS / COMPARTILHADOS
+   ========================================== */
 
 * {
     margin: 0;
@@ -10,10 +13,34 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: rgb(244, 246, 249);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 25px;
+}
+
+section {
+    margin-top: 20px;
+}
+
+li {
+    font-family: "Geomini", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
 a {
     text-decoration: none;
     color: white;
-
     transition: 0.3s ease-out;
 }
 
@@ -21,9 +48,105 @@ a:hover {
     color: #10b981;
 }
 
-body {
-    background-color: rgb(244, 246, 249);
+h3 {
+    font-size: 40px;
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border-left: #10b981 10px solid;
+    padding-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
+
+.branco {
+    color: rgb(255, 255, 255);
+}
+
+.azul {
+    color: #10b981;
+}
+
+/* --- Cabeçalho Global --- */
+
+#cabecalho {
+    background-color: rgb(55, 54, 56);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: solid 2px rgba(55, 54, 56, 0.589);
+    flex-wrap: wrap;
+}
+
+#cabecalho img {
+    width: 60px;
+    height: auto;
+}
+
+#cabecalho button {
+    font-family: "Geomini", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    border-radius: 3px;
+    border: none;
+    padding: 7px;
+    transition: 0.3s ease-out;
+    cursor: pointer;
+}
+
+#cabecalho button:hover {
+    background-color: rgb(208, 204, 204);
+}
+
+#cabecalho ul {
+    display: flex;
+    gap: 50px;
+    list-style: "|    ";
+    color: aliceblue;
+    margin-right: 60px;
+}
+
+#empresa {
+    display: flex;
+    align-items: center;
+}
+
+#empresa p {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#lista-fundo {
+    list-style: none;
+}
+
+/* --- Rodapé Global --- */
+
+footer {
+    background-color: rgb(55, 54, 56);
+    color: rgb(255, 255, 255);
+    margin-top: 50px;
+    height: 65px;
+    font-family: "Geomini", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Modo Escuro Global --- */
 
 body.modo-escuro {
     background-color: rgb(55, 54, 56);
@@ -34,6 +157,288 @@ body.modo-escuro #desc-empresa,
 body.modo-escuro footer {
     background-color: rgb(32, 32, 32);
 }
+
+body.modo-escuro #produtos-section h3 {
+    color: white;
+}
+
+
+/* ==========================================
+   PÁGINA: INÍCIO (INDEX.HTML)
+   ========================================== */
+
+/* --- Banner de Descrição da Empresa --- */
+
+#desc-empresa {
+    background-color: rgb(55, 54, 56);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+#desc-empresa img {
+    width: 400px;
+    height: auto;
+}
+
+#desc-empresa h2 {
+    color: rgb(255, 255, 255);
+    font-family: "Geomini", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 13px;
+    width: 50%;
+}
+
+#desc-titulo {
+    display: flex;
+}
+
+#desc-titulo h1 {
+    font-size: 90px;
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* --- Seção de Produtos --- */
+
+#produtos-section {
+    width: 70%;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.cards img {
+    width: 300px;
+    height: 300px;
+}
+
+#card_01,
+#card_02,
+#card_03 {
+    width: 250px;
+    height: 500px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.053);
+}
+
+.efeito-card {
+    transition: 0.3s ease-out;
+}
+
+.efeito-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.053);
+}
+
+.desc-produto {
+    padding: 15px;
+}
+
+.nome-produto {
+    font-size: 25px;
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.preco {
+    font-size: 22px;
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #10b981;
+}
+
+.botao-carrinho {
+    width: 100%;
+    color: white;
+    background-color: #10b981;
+    border: none;
+    border-radius: 7px;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 15px;
+    font-family: "Geomini", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    transition: 0.3s ease-out;
+    cursor: pointer;
+}
+
+.botao-carrinho:hover {
+    background-color: #0e9e6e;
+}
+
+/* --- Seção do Carrinho de Compras e Formulário --- */
+
+#carrinho-section {
+    background-color: white;
+    width: 30%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: "Geomini", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+#carrinho {
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#carrinho-vazio {
+    color: #bcbdbe;
+    text-align: center;
+    margin: 20px;
+}
+
+#calculo-valor {
+    background-color: #f4f6f9;
+    border: 2px dotted #c4c6c8c2;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#subtotal {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 14px;
+}
+
+#total {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#desconto {
+    color: #10b981;
+    text-align: center;
+    margin: 15px;
+    font-size: 12px;
+}
+
+/* --- Itens Dinâmicos Adicionados ao Carrinho --- */
+
+.item-no-carrinho-fone,
+.item-no-carrinho-caixa,
+.item-no-carrinho-relogio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    border: 1px solid #eef2f3;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+    font-family: sans-serif;
+    color: #333;
+}
+
+.item-no-carrinho-fone button,
+.item-no-carrinho-caixa button,
+.item-no-carrinho-relogio button {
+    background-color: #fff1f0;
+    color: #f5222d;
+    border: 1px solid #ffa39e;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.item-no-carrinho-fone button:hover,
+.item-no-carrinho-caixa button:hover,
+.item-no-carrinho-relogio button:hover {
+    background-color: #f5222d;
+    color: #ffffff;
+    border-color: #f5222d;
+}
+
+/* --- Formulário de Entrega --- */
+
+#espaco-dados {
+    border-top: #c4c6c8c2 2px solid;
+}
+
+#espaco-dados h4 {
+    font-family: "Geomini", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#espaco-dados form {
+    display: flex;
+    flex-direction: column;
+}
+
+#espaco-dados label {
+    margin-bottom: 5px;
+}
+
+#espaco-dados button {
+    font-family: "Geomini", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #0d8c62;
+    background-color: #10b9819f;
+    transition: 0.3s ease-out;
+    cursor: pointer;
+}
+
+#espaco-dados button:hover {
+    background-color: #0d8c62;
+    color: white;
+    transform: translateY(-3.5px);
+}
+
+input {
+    border: 1px solid #c4c6c8c2;
+    background-color: #f4f6f9;
+    border-radius: 5px;
+    width: 100%;
+    height: 38px;
+    margin-bottom: 15px;
+}
+
+input::placeholder {
+    font-family: "Geomini", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+/* --- Modo Escuro Específico: Início --- */
 
 body.modo-escuro #card_01,
 body.modo-escuro #card_02,
@@ -52,376 +457,34 @@ body.modo-escuro .item-no-carrinho {
     color: white;
 }
 
-body.modo-escuro #produtos-section h3 {
+body.modo-escuro input {
+    background-color: rgb(55, 54, 56);
+}
+
+body.modo-escuro .item-no-carrinho-fone,
+body.modo-escuro .item-no-carrinho-caixa,
+body.modo-escuro .item-no-carrinho-relogio {
+    background-color: rgb(55, 54, 56);
     color: white;
 }
 
-section {
-    margin-top: 20px;
-}
-
-li {
-    font-family: "Geomini", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-}
-
-
-
-#desc-empresa {
-    background-color: rgb(55, 54, 56);
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-
-    padding: 60px 20px;
-}
-
-#desc-titulo {
-    display: flex;
-}
-
-#desc-titulo h1 {
-    font-size: 90px;
-    font-family: "Anton SC", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-#desc-empresa h2 {
-    color: rgb(255, 255, 255);
-    font-family: "Geomini", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-    font-size: 13px;
-    width: 50%;
-}
-
-#desc-empresa img {
-    width: 400px;
-    height: auto;
-}
-
-#cabecalho {
-    background-color: rgb(55, 54, 56);
-    display: flex;
-
-    justify-content: space-between;
-    padding: 10px 10px;
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-
-    border: solid 2px rgba(55, 54, 56, 0.589);
-    flex-wrap: wrap;
-}
-
-#cabecalho button {
-    font-family: "Geomini", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-
-    border-radius: 3px;
-    border: none;
-
-    padding: 7px;
-
-    transition: 0.3s ease-out;
-}
-
-#cabecalho button:hover{
-    background-color: rgb(208, 204, 204);
-}
-
-#lista-fundo {
-    list-style: none;
-}
-
-@media (max-width: 685px) {
-    #cabecalho {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-    }
-
-    #desc-empresa {
-        margin-top: 80px;
-    }
-}
-
-#empresa {
-    display: flex;
-    align-items: center;
-}
-
-#empresa p {
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    letter-spacing: 1px;
-
-    font-family: "Anton SC", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.branco {
-    color: rgb(255, 255, 255);
-}
-
-.azul {
-    color: #10b981;
-}
-
-#cabecalho img {
-    width: 60px;
-    height: auto;
-}
-
-#cabecalho ul {
-    display: flex;
-    gap: 50px;
-
-    list-style: "|    ";
-    color: aliceblue;
-
-    margin-right: 60px;
-}
-
-h3 {
-    font-size: 40px;
-    font-family: "Anton SC", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-
-    border-left: #10b981 10px solid;
-    padding-left: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-#produtos-section {
-    width: 70%;
-}
-
-#card_01,
-#card_02,
-#card_03 {
-    width: 250px;
-    height: 500px;
-    background-color: white;
-    border-radius: 10px;
-
-    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.053);
-}
-
-.efeito-card {
-    transition: 0.3s ease-out;
-}
-
-.efeito-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.053);
-}
-
-.cards {
-    display: flex;
-    flex-direction: row;
-
-    gap: 50px;
-    flex-wrap: wrap;
-}
-
-.cards img {
-    width: 300px;
-    height: 300px;
-}
-
-.nome-produto {
-    font-size: 25px;
-    font-family: "Anton SC", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.desc-produto {
-    padding: 15px;
-}
-
-.preco {
-    font-size: 22px;
-    font-family: "Anton SC", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-
-    color: #10b981;
-}
-
-.botao-carrinho {
-    width: 100%;
+body.modo-escuro .item-no-carrinho-fone button,
+body.modo-escuro .item-no-carrinho-caixa button,
+body.modo-escuro .item-no-carrinho-relogio button {
+    background-color: #f1594f;
     color: white;
-    background-color: #10b981;
-    border: none;
-    border-radius: 7px;
-
-    padding: 10px;
-    margin-top: 10px;
-
-    font-size: 15px;
-    font-family: "Geomini", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-
-    transition: 0.3s ease-out;
 }
 
-.botao-carrinho:hover {
-    background-color: #0e9e6e;
-}
-
-#carrinho-section {
-    background-color: white;
-    width: 30%;
-    height: 100%;
-    padding: 20px;
-
-    border-radius: 10px;
-
-    font-family: "Geomini", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-}
-
-#calculo-valor {
-    background-color: #f4f6f9;
-    border: 2px dotted #c4c6c8c2;
-    border-radius: 10px;
-    width: 100%;
-
-    margin-bottom: 20px;
-}
-
-#carrinho-vazio {
-    color: #bcbdbe;
-    text-align: center;
-    margin: 20px;
-}
-
-#subtotal {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-
-    font-size: 14px;
-}
-
-#total {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-
-    font-weight: bold;
-    font-size: 18px;
-}
-
-#desconto {
-    color: #10b981;
-    text-align: center;
-    margin: 15px;
-
-    font-size: 12px;
-}
-
-#espaco-dados h4 {
-    font-family: "Geomini", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-    font-size: 20px;
-
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-#espaco-dados {
-    border-top: #c4c6c8c2 2px solid;
+body.modo-escuro .item-no-carrinho-fone button:hover,
+body.modo-escuro .item-no-carrinho-caixa button:hover,
+body.modo-escuro .item-no-carrinho-relogio button:hover {
+    background-color: #e93326;
 }
 
 
-#espaco-dados form {
-    display: flex;
-    flex-direction: column;
-}
-
-#espaco-dados label {
-    margin-bottom: 5px;
-}
-
-#espaco-dados button {
-    font-family: "Geomini", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-
-    height: 40px;
-    border-radius: 5px;
-
-    border: 1px solid #0d8c62;
-    background-color: #10b9819f;
-
-    transition: 0.3s ease-out;
-}
-
-#espaco-dados button:hover {
-    background-color: #0d8c62;
-    color: white;
-    transform: translateY(-3.5px);
-}
-
-input {
-    border: 1px solid #c4c6c8c2;
-    background-color: #f4f6f9;
-    border-radius: 5px;
-
-    width: 100%;
-    height: 38px;
-
-    margin-bottom: 15px;
-}
-
-input::placeholder {
-    font-family: "Geomini", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-}
-
-footer {
-    background-color: rgb(55, 54, 56);
-    color: rgb(255, 255, 255);
-
-    margin-top: 50px;
-
-    height: 65px;
-
-    font-family: "Geomini", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+/* ==========================================
+   PÁGINA: HISTÓRIA (HISTORIA.HTML)
+   ========================================== */
 
 #main-historia {
     margin-top: 100px;
@@ -444,49 +507,34 @@ footer {
     width: 50%;
 }
 
-.texto-historia {
-    font-family: "Geomini", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-
-    text-align: justify;
-    padding: 20px;
-}
-
 .titulo-historia {
     text-transform: uppercase;
     display: inline-block;
     border: #10b981 5px solid;
     margin-top: 20px;
     padding: 10px 20px;
-
     font-family: "Anton SC", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
+.texto-historia {
+    font-family: "Geomini", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    text-align: justify;
+    padding: 20px;
+}
+
 .desc-coala {
     background-color: #f4f6f9;
     border: 1px dotted #c4c6c8c2;
-
     margin: 8px 13px;
 }
 
 .desc-coala mark {
     background-color: #0d8c6274;
-}
-
-.div-escondida p {
-    font-family: "Geomini", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-
-    border: #0b996a solid 2px;
-
-    margin: 10px 20px;
-    padding: 15px 50px;
 }
 
 #historia-escondida {
@@ -497,40 +545,148 @@ footer {
     display: none;
 }
 
-#botao-tamanho button {
-    width: fit-content;
-    height: auto;
-    padding: 15px 100px;
-
-    margin-bottom: 10px;
-    margin-top: 10px;
-
-    background-color: #10b981;
-    border: #0b996a solid 1.5px;
-    border-radius: 5px;
-
+.div-escondida p {
     font-family: "Geomini", sans-serif;
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
+    border: #0b996a solid 2px;
+    margin: 10px 20px;
+    padding: 15px 50px;
+}
 
+#botao-tamanho button {
+    width: fit-content;
+    height: auto;
+    padding: 15px 100px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: #10b981;
+    border: #0b996a solid 1.5px;
+    border-radius: 5px;
+    font-family: "Geomini", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
     transition: 0.3s ease-out;
 }
 
 #botao-tamanho button:hover {
     background-color: #0e9e6e;
-
     transform: translateY(-3px);
 }
 
-main {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    padding: 25px;
+/* --- Modo Escuro Específico: História --- */
+
+body.modo-escuro #main-historia section {
+    background-color: #2b2b2b;
+    color: white;
 }
 
+body.modo-escuro .desc-coala {
+    background-color: rgb(55, 54, 56);
+}
+
+body.modo-escuro .desc-coala mark {
+    background-color: #0aeca187;
+}
+
+
+/* ==========================================
+   PÁGINA: CONTATOS (CONTATOS.HTML)
+   ========================================== */
+
+#main-contatos {
+    margin-top: 150px;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1;
+    gap: 45px;
+}
+
+#main-contatos section {
+    background-color: white;
+    border: 3px solid #0b996a;
+    border-radius: 10px;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    padding: 20px;
+}
+
+#main-contatos section h1 {
+    font-size: 80px;
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#main-contatos section p {
+    font-size: 40px;
+    font-family: "Geomini", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    background-color: #f4f6f9;
+    border: 2px dotted #c4c6c8c2;
+    border-radius: 5px;
+    transition: 0.3s ease-out;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#main-contatos section p:hover {
+    transform: translateY(-5px);
+}
+
+.insta-nome {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.insta {
+    color: #2b2b2b;
+}
+
+#foto-insta {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+/* --- Modo Escuro Específico: Contatos --- */
+
+body.modo-escuro #main-contatos section {
+    background-color: rgb(32, 32, 32);
+    border: 3px solid #0dc185;
+}
+
+body.modo-escuro #main-contatos section h1 {
+    color: white;
+}
+
+body.modo-escuro #main-contatos section p {
+    background-color: rgb(55, 54, 56);
+    color: white;
+}
+
+body.modo-escuro #main-contatos .insta {
+    color: white;
+}
+
+
+/* ==========================================
+   MEDIA QUERIES (RESPONSIVIDADE)
+   ========================================== */
+
 @media (max-width: 1000px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
 
     #produtos-section {
         width: 100%;
@@ -538,11 +694,6 @@ main {
 
     #carrinho-section {
         width: 100%;
-    }
-
-    main {
-        display: flex;
-        flex-direction: column;
     }
 
     #historia-section {
@@ -554,50 +705,20 @@ main {
     }
 }
 
+@media (max-width: 685px) {
+    #cabecalho {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #desc-empresa {
+        margin-top: 80px;
+    }
+}
+
 @media (min-width: 540px) {
     #botao-tamanho button {
         padding: 10px 200px;
     }
-}
-
-
-.item-no-carrinho {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    width: 100%;
-    padding: 12px 16px;
-    margin-bottom: 10px;
-    background-color: #ffffff;
-    border: 1px solid #eef2f3;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
-    font-family: sans-serif;
-    color: #333;
-}
-
-.item-no-carrinho button {
-    background-color: #fff1f0;
-    color: #f5222d;
-    border: 1px solid #ffa39e;
-    padding: 6px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.item-no-carrinho button:hover {
-    background-color: #f5222d;
-    color: #ffffff;
-    border-color: #f5222d;
-}
-
-
-#carrinho {
-    max-height: 400px;
-
-    overflow-y: auto;
-
-    overflow-x: hidden;
 }
