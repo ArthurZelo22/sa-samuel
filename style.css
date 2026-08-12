@@ -490,6 +490,8 @@ body.modo-escuro .item-no-carrinho-relogio button:hover {
     margin-top: 100px;
     display: flex;
     gap: 20px;
+
+    flex: 1;
 }
 
 #main-historia section {
@@ -614,6 +616,8 @@ body.modo-escuro .desc-coala mark {
     height: fit-content;
     text-align: center;
     padding: 20px;
+
+    flex-direction: column;
 }
 
 #main-contatos section h1 {

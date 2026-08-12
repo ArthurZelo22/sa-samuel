@@ -24,7 +24,7 @@
 
             <nav>
                 <ul>
-                    <li id="lista-fundo"><button onclick="corFundo()">Cor de fundo</button></li>
+                    <li id="lista-fundo"><button id="botaoCorFundo" onclick="corFundo()">Modo escuro</button></li>
                     <li><a href="index.html">início</a></li>
                     <li><a href="historia.html">história</a></li>
                     <li><a href="contatos.html">contatos</a></li>
@@ -72,7 +72,7 @@
                     <div id="card_02">
                         <img src="imagens/smartwatch.png" alt="Foto de um relógio de pulso.">
                         <div class="desc-produto">
-                            <p class="nome-produto">Relógio</p>
+                            <p class="nome-produto">Relógio inteligente TekkoWatch</p>
                             <p class="preco">R$ 550,00</p>
                             <button class="botao-carrinho" onclick="botaoRelogio()">adicionar ao carrinho</button>
                         </div>
@@ -122,12 +122,12 @@
                 <form>
                     <h4>Dados para Entrega</h4>
                     <label>Nome completo:</label>
-                    <input type="text" placeholder="  Digite seu nome aqui">
+                    <input id="campoNome" type="text" placeholder="  Digite seu nome aqui">
 
                     <label>E-mail:</label>
-                    <input type="email" placeholder="  nome@email.com">
+                    <input id="campoEmail" type="email" placeholder="  nome@email.com">
 
-                    <button>Enviar</button>
+                    <button id="botaoEnviar" onclick="enviar()">Enviar</button>
 
                 </form>
             </div>

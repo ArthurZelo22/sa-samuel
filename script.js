@@ -230,6 +230,24 @@ function aparecerCoala() {
 
 function corFundo(){
     let body = document.getElementById('body')
+    let btnFundo = document.getElementById('botaoCorFundo')
 
     body.classList.toggle('modo-escuro');
+
+    if (body.classList.contains('modo-escuro')) {
+        btnFundo.innerText = 'Modo Claro';
+    } else {
+        btnFundo.innerText = 'Modo Escuro';
+    }
+}
+
+
+
+
+function enviar(){
+    let botaoEnviar = document.getElementById('botaoEnviar')
+    let campoNome = document.getElementById('campoNome')
+    let campoEmail = document.getElementById('campoEmail')
+
+    alert('Quase lá ' + campoNome.value + '! Enviaremos uma mensagem para o e-mail ' + campoEmail.value + 'para confirmar as informações de endereço.')
 }
