@@ -106,9 +106,10 @@ h3 {
 }
 
 #cabecalho ul {
+    align-items: center;
     display: flex;
     gap: 50px;
-    list-style: "|    ";
+    list-style: none;
     color: aliceblue;
     margin-right: 60px;
 }
@@ -230,9 +231,11 @@ body.modo-escuro #produtos-section h3 {
 #card_03,
 #card_04,
 #card_05,
-#card_06 {
+#card_06,
+#card_07,
+#card_08 {
     width: 250px;
-    height: 500px;
+    height: 450px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.053);
@@ -353,7 +356,9 @@ body.modo-escuro #produtos-section h3 {
 .item-no-carrinho-relogio,
 .item-no-carrinho-monitor,
 .item-no-carrinho-Ps5,
-.item-no-carrinho-notebook {
+.item-no-carrinho-notebook,
+.item-no-carrinho-pelicula,
+.item-no-carrinho-oculos {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -374,7 +379,9 @@ body.modo-escuro #produtos-section h3 {
 .item-no-carrinho-relogio button,
 .item-no-carrinho-monitor button,
 .item-no-carrinho-Ps5 button,
-.item-no-carrinho-notebook button {
+.item-no-carrinho-notebook button,
+.item-no-carrinho-pelicula button,
+.item-no-carrinho-oculos button {
     background-color: #fff1f0;
     color: #f5222d;
     border: 1px solid #ffa39e;
@@ -386,7 +393,12 @@ body.modo-escuro #produtos-section h3 {
 
 .item-no-carrinho-fone button:hover,
 .item-no-carrinho-caixa button:hover,
-.item-no-carrinho-relogio button:hover {
+.item-no-carrinho-relogio button:hover,
+.item-no-carrinho-monitor button:hover,
+.item-no-carrinho-Ps5 button:hover,
+.item-no-carrinho-notebook button:hover,
+.item-no-carrinho-pelicula button:hover,
+.item-no-carrinho-oculos button:hover {
     background-color: #f5222d;
     color: #ffffff;
     border-color: #f5222d;
@@ -404,8 +416,7 @@ body.modo-escuro #produtos-section h3 {
     font-weight: weight;
     font-style: normal;
     font-size: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 25px 0px;
 }
 
 #espaco-dados form {
@@ -443,6 +454,7 @@ input {
     width: 100%;
     height: 38px;
     margin-bottom: 15px;
+    padding-left: 8px;
 }
 
 input::placeholder {
@@ -459,8 +471,10 @@ body.modo-escuro #card_02,
 body.modo-escuro #card_03,
 body.modo-escuro #card_04,
 body.modo-escuro #card_05,
-body.modo-escuro #card_06 {
-    background-color: rgb(55, 54, 56);
+body.modo-escuro #card_06,
+body.modo-escuro #card_07,
+body.modo-escuro #card_08 {
+    background-color: rgb(46, 46, 48);
     color: white;
 }
 
@@ -480,27 +494,45 @@ body.modo-escuro .item-no-carrinho {
 
 body.modo-escuro input {
     background-color: rgb(55, 54, 56);
+    color: white;
 }
 
 body.modo-escuro .item-no-carrinho-fone,
 body.modo-escuro .item-no-carrinho-caixa,
-body.modo-escuro .item-no-carrinho-relogio {
+body.modo-escuro .item-no-carrinho-relogio,
+body.modo-escuro .item-no-carrinho-monitor,
+body.modo-escuro .item-no-carrinho-Ps5, 
+body.modo-escuro .item-no-carrinho-notebook,
+body.modo-escuro .item-no-carrinho-pelicula,
+body.modo-escuro .item-no-carrinho-oculos {
     background-color: rgb(55, 54, 56);
     color: white;
 }
 
 body.modo-escuro .item-no-carrinho-fone button,
 body.modo-escuro .item-no-carrinho-caixa button,
-body.modo-escuro .item-no-carrinho-relogio button {
+body.modo-escuro .item-no-carrinho-relogio button,
+body.modo-escuro .item-no-carrinho-monitor button,
+body.modo-escuro .item-no-carrinho-Ps5 button,
+body.modo-escuro .item-no-carrinho-notebook button,
+body.modo-escuro .item-no-carrinho-pelicula button,
+body.modo-escuro .item-no-carrinho-oculos button {
     background-color: #f1594f;
     color: white;
 }
 
 body.modo-escuro .item-no-carrinho-fone button:hover,
 body.modo-escuro .item-no-carrinho-caixa button:hover,
-body.modo-escuro .item-no-carrinho-relogio button:hover {
+body.modo-escuro .item-no-carrinho-relogio button:hover,
+body.modo-escuro .item-no-carrinho-monitor button:hover, 
+body.modo-escuro .item-no-carrinho-Ps5 button:hover, 
+body.modo-escuro .item-no-carrinho-notebook button:hover,
+body.modo-escuro .item-no-carrinho-pelicula button:hover,
+body.modo-escuro .item-no-carrinho-oculos button:hover{
     background-color: #e93326;
 }
+
+
 
 
 /* ==========================================

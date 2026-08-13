@@ -55,6 +55,14 @@ function botaoNotebook() {
     adicionarAoCarrinho('item-no-carrinho-notebook', 'NoteBook com última tecnologia', 5300);
 }
 
+function botaoPelicula() {
+    adicionarAoCarrinho('item-no-carrinho-pelicula', 'Pelicula no precinho que não arranha', 67);
+}
+
+function botaoOculos() {
+    adicionarAoCarrinho('item-no-carrinho-oculos', 'Oculos de realidade virtual', 9999.99);
+}
+
 // Função base para adicionar produtos (evita repetir código)
 function adicionarAoCarrinho(classeItem, nomeProduto, preco) {
     let containerCarrinho = document.getElementById('carrinho');
@@ -96,6 +104,10 @@ function removerItem(botao) {
         valorSubtotal -= 4599;
     } else if (classe === 'item-no-carrinho-notebook') {
         valorSubtotal -= 5300;
+    } else if (classe === 'item-no-carrinho-pelicula') {
+        valorSubtotal -= 67;
+    }  else if (classe === 'item-no-carrinho-oculos') {
+        valorSubtotal -= 9999.99;
     }
 
     botao.parentElement.remove();
@@ -134,9 +146,10 @@ function atualizarTotais() {
 function enviar() {
     let campoNome = document.getElementById('campoNome');
     let campoEmail = document.getElementById('campoEmail');
+    let campoTotal = document.getElementById('pTotal')
     
     if (campoNome && campoEmail) {
-        alert('Quase lá ' + campoNome.value + '! Enviaremos uma mensagem para o e-mail ' + campoEmail.value + ' para confirmar as informações de endereço.');
+        alert(campoNome.value + ', a sua compra foi aprovada!\n\nSerá enviado uma mensagem no Email '+ campoEmail.value + ' para confirmar as informações de endereço.\n\nFique ligado!!! 🐨' );
     }
 }
 
